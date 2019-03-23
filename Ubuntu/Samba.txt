@@ -1,0 +1,54 @@
+Ubuntu 16.04-en:
+Parancsok:
+sudo apt-get update
+sudo apt-get install samba -y
+sudo mkdir /srv/kozos
+sudo chmod 777 /srv/kozos
+sudo mcedit /etc/samba/smb.conf
+    [global]
+  netbios name=samba
+  security=user
+  map to guest=bad user
+  workgroup = WORKGROUP
+  public=yes
+  [kozos]
+  comment=nyilvános írható-olvasható megosztás
+  path=/srv/kozos
+  writeable=yes
+  read only=no
+  browseable=yes
+  guest ok=yes
+  public=yes
+
+  [readonly]
+  comment=nyilvános csak olvasható megosztás
+  path=/srv/readonly
+  read only=yes
+  browseable=yes
+  guest ok=yes
+  public=yes
+sudo service smbd restart
+sudo service smbd status
+Teszt:
+sudo testparm
+sudo useradd user2 -c "user2" -g users -m -d /home/user2 -s /bin/bash
+sudo passwd user2
+sudo mkdir /srv/user2
+sudo chown user2 /srv/user2
+sudo chmod 700 /srv/user2
+sudo mcedit /etc/samba/smb.conf
+    [user2]
+    comment=írható-olvasható megosztás a user2 felhasználónak
+    path=/srv/user2
+    writeable=yes
+    browseable=no
+    public=no
+    read list=user2
+    writelist=user2
+    force directory mode=0777
+    force create mode=0777
+sudo smbpasswd -a user2 
+sudo service smbd restart
+[Feladat kezelő linxuon]
+CTRL+L
+smb:/ipcím
