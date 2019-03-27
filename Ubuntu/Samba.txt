@@ -51,4 +51,4 @@ sudo smbpasswd -a user2
 sudo service smbd restart
 [Feladat kezelő linxuon]
 CTRL+L
-smb:/ipcím
+smb://ipcím
