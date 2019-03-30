@@ -1,0 +1,27 @@
+Ubuntu 16.04-en:
+Parancsok:
+sudo apt-get update
+sudo apt-get install tasksel mc zip -y
+sudo tasksel install lamp-server
+      Mysql root jelszó megadása
+mysql -u root -p
+CREATE DATABASE wordpressdb; //Létrehozza az adatbázist bejelentkezésnél ezt kell használni vizsgán változhat.
+CREATE USER wordpressuser@localhost IDENTIFIED BY 'wordpresspassword'; //Létrehozza a felhasználót, bejelentkezésnél ezt kell használni vizsgán változhat.
+GRANT ALL PRIVILEGES ON wordpressdb.* TO wordpressuser@localhost; FLUSH PRIVILEGES;
+exit
+cd /tmp
+wget http://wordpress.org/latest.zip
+sudo unzip -q latest.zip -d /var/www/html/
+sudo chown -R www-data:www-data /var/www/html/wordpress
+sudo chmod -R 755 /var/www/html/wordpress
+sudo mkdir -p /var/www/html/wordpress/wp-content/uploads
+sudo chown -R www-data:www-data /var/www/html/wordpress/wp-content/uploads 
+sudo service apache2 restart
+sudo apt-get install php7.0-mysql
+[Böngészőben]
+ipcím/wordpress
+magyar nyelv kiválasztása
+Adatbázis neve: wordpressdb
+Felhasználónév: wordpressuser
+Jelszó: wordpresspassword
+Tábla előtag: wp_
