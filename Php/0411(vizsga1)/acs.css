@@ -1,0 +1,34 @@
+body {
+	background-color:maroon;
+	color:white;
+}
+table{
+	width:50%;
+	background-color:#FF9900;
+	padding:30px;
+	border-radius:30px 20px 10px 40px;
+	box-shadow:5px 10px #500000;
+}
+tr{
+	border:3px white solid;
+	text-align:right;
+	box-shadow:5px 5px #E0904E ;
+	
+}
+td{
+	border:3px grey solid;
+}
+#zold{
+	background-color:green;
+}
+h1{
+	text-align:center;
+}
+input.be{
+	width:50px;
+}
+input.mehet{
+	background-color:#E0904E;
+	color:white;
+	width:100%;
+}
