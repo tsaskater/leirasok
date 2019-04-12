@@ -13,6 +13,6 @@ chown user2 /srv/user2
 chmod 700 /srv/user2
 echo "User2 jelszava: "
 read user2
+echo "Adja meg a(z) user2 felhasználó smb jelszavát: "
 smbpasswd -a user2
-$user2
 service smbd restart
