@@ -1,6 +1,6 @@
 <?php
-	echo "<h1>Számkereső</h1>";
 	echo "<LINK REL='stylesheet' TYPE='text/css' HREF='acs.css'>";
+	echo "<h1>Számkereső</h1>";
 	echo "<form method = 'post'>\n";
 	echo "<table id=tabla><tr><td>Keresett szám:</td>";
 	echo "<td rowspan=2><input class=mehet type = 'submit' name = 'gomb' value='Mehet'></td>";
