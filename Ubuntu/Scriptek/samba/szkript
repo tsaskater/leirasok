@@ -6,7 +6,6 @@ chmod 777 /srv/kozos
 mv /etc/samba/smb.conf /etc/samba/smbold.conf
 cp smb.conf /etc/samba/smb.conf
 service smbd restart
-service smbd status
 adduser user2 --gecos "user2,,," --disabled-password
 echo "user2:diak" | chpasswd
 mkdir /srv/user2
