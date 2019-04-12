@@ -1,6 +1,6 @@
 Ubuntu 16.04-en:
 Parancsok:
-sudo apt-get update
+sudo apt-get update -y
 sudo apt-get install samba -y
 sudo mkdir /srv/kozos
 sudo chmod 777 /srv/kozos
