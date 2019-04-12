@@ -4,7 +4,7 @@
 	echo "<form method = 'post'>\n";
 	echo "<table id=tabla><tr><td>Keresett szám:</td>";
 	echo "<td rowspan=2><input class=mehet type = 'submit' name = 'gomb' value='Mehet'></td>";
-	echo "<tr><td>0< <input class=be [type = 'number' name = 'be']> <11</td>";
+	echo "<tr><td>0< <input class=be type = 'number' name = 'be'> <11</td>";
 	echo "</form>\n";
 	echo "</table>";
 	if(isset($_POST['gomb'])){
