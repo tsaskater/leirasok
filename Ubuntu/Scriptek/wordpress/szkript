@@ -7,7 +7,6 @@ mysql -u root -p -Bse "CREATE DATABASE wordpressdb;
 CREATE USER wordpressuser@localhost IDENTIFIED BY 'wordpresspassword';
 GRANT ALL PRIVILEGES ON wordpressdb.* TO wordpressuser@localhost;
 FLUSH PRIVILEGES;"
-exit
 cd /tmp
 wget http://wordpress.org/latest.zip
 unzip -q latest.zip -d /var/www/html/
