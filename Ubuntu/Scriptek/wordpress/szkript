@@ -3,11 +3,10 @@ apt-get update -y
 apt-get install tasksel mc zip -y
 tasksel install lamp-server
 mysql -u root -p
-sqlplus -s user/123@SID <<EOF
-CREATE DATABASE wordpressdb;
-CREATE USER wordpressuser@localhost IDENTIFIED BY 'wordpresspassword';
-GRANT ALL PRIVILEGES ON wordpressdb.* TO wordpressuser@localhost; FLUSH PRIVILEGES;
-EOF
+echo "CREATE DATABASE wordpressdb;" | mysql
+echo "CREATE USER wordpressuser@localhost IDENTIFIED BY 'wordpresspassword';" | mysql
+echo "GRANT ALL PRIVILEGES ON wordpressdb.* TO wordpressuser@localhost;" | mysql
+FLUSH PRIVILEGES;
 exit
 cd /tmp
 wget http://wordpress.org/latest.zip
