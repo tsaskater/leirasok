@@ -1,7 +1,8 @@
 #!/bin/bash -e
 apt-get update -y
-apt-get upgrade -y
-adduser git
+#apt-get upgrade -y
+adduser git --gecos "git,,," --disabled-password
+echo "git:123" | chpasswd
 apt-get -y install mc nmap git
 wget https://dl.gogs.io/0.11.86/gogs_0.11.86_linux_amd64.tar.gz
 tar xvf gogs_0.11.86_linux_amd64.tar.gz
