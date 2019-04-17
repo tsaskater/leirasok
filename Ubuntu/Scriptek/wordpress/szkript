@@ -6,7 +6,7 @@ mysql -u root -p
 echo "CREATE DATABASE wordpressdb;" | mysql
 echo "CREATE USER wordpressuser@localhost IDENTIFIED BY 'wordpresspassword';" | mysql
 echo "GRANT ALL PRIVILEGES ON wordpressdb.* TO wordpressuser@localhost;" | mysql
-FLUSH PRIVILEGES;
+echo "FLUSH PRIVILEGES;" | mysql
 exit
 cd /tmp
 wget http://wordpress.org/latest.zip
