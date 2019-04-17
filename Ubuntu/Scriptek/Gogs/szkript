@@ -7,7 +7,7 @@ wget https://dl.gogs.io/0.11.86/gogs_0.11.86_linux_amd64.tar.gz
 tar xvf gogs_0.11.86_linux_amd64.tar.gz
 mkdir /var/log/gogs
 chown -R git:git /var/log/gogs/
-cp gogs/scripts/systemd/gogs.service /etc/systemd/system
+cp gogs/scripts/systemd/gogs.service /etc/systemd/systemd
 rsync -avz gogs/* /home/git/
 chown -R git:git /home/git/
 setcap CAP_NET_BIND_SERVICE=+eip /home/git/gogs
@@ -18,5 +18,5 @@ systemctl start gogs
 systemctl enable gogs
 mkdir /home/git/conf
 mv /home/git/conf/app.ini /home/git/conf/appold.ini
-cp app.ini /home/git/conf/app.ini
+cp app.ini /home/git/conf
 
