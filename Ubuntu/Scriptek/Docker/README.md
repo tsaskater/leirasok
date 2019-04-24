@@ -18,7 +18,7 @@ Ezt a script kiadásának útvonala/docker mappában változtathatjuk az alábbi
 
    Az index.html file tartalmának szerkesztése.
    
-   docker stop név //docker process leállítása a neve generált ezért tabolni kell
+   docker stop név //docker konténer leállítása a neve generált ezért tabolni kell
    
    docker rmi -f webserver-image:v1
    
@@ -28,12 +28,14 @@ Ezt a script kiadásának útvonala/docker mappában változtathatjuk az alábbi
    
 
 [Docker hasznos parancsok:]
+  
+  docker ps //listázza a futó konténereket
 
-  docker rmi -f webserver-image:v1
+  docker rmi -f imagenév //törli az adott imaget tabolni lehet a script tageli webserver-image:v1-re
   
-  docker start név //docker process indítása a neve generált ezért tabolni kell
+  docker start név //docker konténer indítása a neve generált ezért tabolni kell
   
-  docker stop név //docker process leállítása a neve generált ezért tabolni kell
+  docker stop név //docker konténer leállítása a neve generált ezért tabolni kell
   
-  docker rm név //törli a megállított processt a neve generált ezért tabolni kell
+  docker rm név //törli a megállított konténert a neve generált ezért tabolni kell
   
