@@ -1,6 +1,6 @@
 #!/bin/bash -e
 apt-get update -y
-apt-get install tasksel mc zip -y
+apt-get install tasksel php7.0-mysql php-gd mc zip -y
 tasksel install lamp-server
 echo "---Adja meg a jelszavát---";
 mysql -u root -p -Bse "CREATE DATABASE wordpressdb;
@@ -14,6 +14,7 @@ chown -R www-data:www-data /var/www/html/wordpress
 chmod -R 755 /var/www/html/wordpress
 mkdir -p /var/www/html/wordpress/wp-content/uploads
 chown -R www-data:www-data /var/www/html/wordpress/wp-content/uploads 
+mkdir -p /var/www/html/wordpress/tmp
+chmod 777 /var/www/html/wordpress/tmp
 service apache2 restart
-apt-get install php7.0-mysql
 echo "A szkript sikeresen lefutott."
