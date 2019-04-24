@@ -18,5 +18,5 @@ apt-cache madison docker-ce
 git clone https://github.com/tsaskater/docker
 cd docker
 docker build -t webserver-image:v1 .
-docker run -d -p 80:80 webserver-image:v1
+docker run -d --name=webserver-container:v1 -p 80:80 webserver-image:v1
 cd
