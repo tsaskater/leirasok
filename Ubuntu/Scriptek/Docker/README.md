@@ -2,7 +2,7 @@
 
   Feltelepíti a szükséges programokat.
   
-  A script futása közben le klónózza az előre elkészített repositorymat
+  A script futása közben leklónózza az előre elkészített repositorymat
   
   (git clone https://github.com/tsaskater/docker)
   
