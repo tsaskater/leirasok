@@ -16,7 +16,7 @@ Az index.html file tartalma.
 
 Ezt a script kiadásának útvonala/docker mappában változtathatjuk az alábbi módon:
 
-   Az index.html file tartalmának szerkesztése.
+   Az index.html file tartalmának szerkesztése
    
    docker stop név //docker konténer leállítása a neve generált ezért tabolni kell
    
