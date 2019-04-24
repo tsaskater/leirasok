@@ -5,6 +5,7 @@
   (git clone https://github.com/tsaskater/docker)
   belép ebbe (cd docker)
   megfuttatja a benne lévő Dockerfile-t
+
 [A vizsgán változhat]
 
 Az index.html file tartalma.
@@ -14,6 +15,7 @@ Ezt a script kiadásának útvonala/docker mappában változtathatjuk az alábbi
    docker rmi -f webserver-image:v1
    docker build -t webserver-image:v1 .
    docker run -d -p 80:80 webserver-image:v1
+
 [Docker hasznos parancsok:]
 
   docker rmi -f webserver-image:v1
