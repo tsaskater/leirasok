@@ -45,7 +45,7 @@
   * `docker ps`
   >listázza a futó konténereket
 
-  * docker rmi -f imagenév 
+  * `docker rmi -f [imagenév]`
   >törli az adott imaget ***tabolni lehet*** a script tageli `webserver-image:v1`-re
   
   * `docker start [név]`
