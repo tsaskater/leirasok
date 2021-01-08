@@ -1,9 +1,3 @@
-<style type="text/css">
-  body {
-    background-color: #adf7c1;
-  }
-</style>
-
 #  Docker script használata:
 
   #### Feltelepíti a szükséges programokat és csomagokat.
