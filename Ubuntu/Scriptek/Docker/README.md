@@ -1,41 +1,65 @@
-  [Docker script használata:]
+<style type="text/css">
+  body {
+    background-color: #adf7c1;
+  }
+</style>
 
-  Feltelepíti a szükséges programokat.
+#  Docker script használata:
+
+  #### Feltelepíti a szükséges programokat és csomagokat.
   
-  A script futása közben leklónózza az előre elkészített repositorymat
+  A [script](https://github.com/tsaskater/leirasok/blob/master/Ubuntu/Scriptek/Docker/szkript) futása közben leklónózza az előre elkészített repositorymat
   
-  (git clone https://github.com/tsaskater/docker)
+  `git clone https://github.com/tsaskater/docker`
   
-  belép ebbe (cd docker)
+  belép ebbe
   
-  megfuttatja a benne lévő Dockerfile-t
+  `cd docker`
+  
+  felépíti és futtatja a benne lévő Dockerfile-t
+  
+  ```
+  docker build -t webserver-image:v1 .
+  
+  docker run -d -p 80:80 webserver-image:v1
+  ```
+  >A script tageli a docker imaget `webserver-image:v1`-re enélkül automatikusan **generált** nevet kapna
+  
+  
+  
 
-[A vizsgán változhat]
+## A vizsgán változhat
 
-Az index.html file tartalma.
+ #### Az **index.html** file tartalma.
 
-Ezt a script kiadásának útvonala/docker mappában változtathatjuk az alábbi módon:
+ #### Ezt a script kiadásának útvonala/docker mappában változtathatjuk az alábbi módon:
 
-   Az index.html file tartalmának szerkesztése
+   1. Az **index.html** file tartalmának szerkesztése
    
-   docker stop név //docker konténer leállítása a neve generált ezért tabolni kell
+   2. `docker stop [név]` 
+   >docker konténer leállítása során a neve generált ezért tabolni kell
    
-   docker rmi -f webserver-image:v1
+   3. `docker rmi -f webserver-image:v1`
    
-   docker build -t webserver-image:v1 .
+   4. `docker build -t webserver-image:v1 . `
    
-   docker run -d -p 80:80 webserver-image:v1
+   5. `docker run -d -p 80:80 webserver-image:v1 `
    
 
-[Docker hasznos parancsok:]
+## Docker hasznos parancsok:
   
-  docker ps //listázza a futó konténereket
+  * `docker ps`
+  >listázza a futó konténereket
 
-  docker rmi -f imagenév //törli az adott imaget tabolni lehet a script tageli webserver-image:v1-re
+  * docker rmi -f imagenév 
+  >törli az adott imaget ***tabolni lehet*** a script tageli `webserver-image:v1`-re
   
-  docker start név //docker konténer indítása a neve generált ezért tabolni kell
+  * `docker start [név]`
+  >docker konténer indítása (a neve **generált** ezért tabolni kell)
   
-  docker stop név //docker konténer leállítása a neve generált ezért tabolni kell
+  * `docker stop [név]`
+  >docker konténer leállítása (a neve **generált** ezért tabolni kell)
   
-  docker rm név //törli a megállított konténert a neve generált ezért tabolni kell
-  
+  * `docker rm [név]`
+  >törli a megállított konténert (a neve **generált** ezért tabolni kell)
+  ***
